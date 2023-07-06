@@ -10,10 +10,13 @@ puts "Cleaning database..."
 Restaurant.destroy_all
 
 puts "Creating restaurants..."
-dishoom = {name: "Dishoom", address: "7 Boundary St, London E2 7JE", rating: 5}
-pizza_east =  {name: "Pizza East", address: "56A Shoreditch High St, London E1 6PQ", rating: 4}
+dishoom = {name: "Dishoom", address: "7 Boundary St, London E2 7JE", category: "chinese", phone_number: "000"}
+pizza_east =  {name: "Pizza East", address: "56A Shoreditch High St, London E1 6PQ", category: "chinese", phone_number: "000"}
+sushi_ro =  {name: "Sushiro", address: "Tokyo", category: "chinese", phone_number: "000"}
+kfc =  {name: "KFC", address: "Tokyo" , category: "chinese", phone_number: "000"}
+abc = {name: "ABC", address: "Tokyo", category: "chinese", phone_number: "000"}
 
-[dishoom, pizza_east].each do |attributes|
+[dishoom, pizza_east, sushi_ro, kfc, abc].each do |attributes|
   restaurant = Restaurant.create!(attributes)
   puts "Created #{restaurant.name}"
 end
